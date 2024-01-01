@@ -39,6 +39,7 @@
 #  Security Considerations
    -> IAM Roles and Policies
       Ensure IAM roles and policies follow the principle of least privilege. 
+      
    -> Network Security
       Implement network security practices such as VPC configurations and security groups.
 
