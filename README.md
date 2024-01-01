@@ -52,7 +52,12 @@
    
       Implement network security practices such as VPC configurations and security groups.
 
+# Variables File
+  -> Configuration Reusability. Terraform variables enable you to reuse configurations across different environments or projects.
 
+# Output File
+  -> Terraform output values let you export structured data about your resources.
+  
 #  Deployment Steps
   -> Prerequisites
   
