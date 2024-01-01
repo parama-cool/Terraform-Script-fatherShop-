@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2" 
+  region = "ap-south-1" 
 }
 
 # Create VPC
@@ -14,7 +14,7 @@ resource "aws_subnet" "public_subnet" {
   vpc_id                  = aws_vpc.devops_vpc.id
   cidr_block              = "10.0.1.0/24"
   availability_zone       = "us-west-2a"
-  map_public_ip_on_launch = true
+  map_public_ip = true
 }
 
 # Create EKS Cluster
@@ -32,7 +32,7 @@ resource "aws_db_instance" "mysql" {
   instance_class    = "db.t2.micro"
   name              = "wordpress-db"
   username          = "admin"
-  password          = "password"
+  password          = "1234567"
   allocated_storage = 20
   publicly_accessible = true 
 }
@@ -72,5 +72,6 @@ resource "aws_lb" "wordpress_lb" {
   security_groups    = [aws_security_group.lb_sg.id]
   subnets            = [aws_subnet.public_subnet.id]
 }
+
 
 
